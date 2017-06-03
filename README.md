@@ -1,6 +1,6 @@
-# franc microservice for AWS
+# franc for AWS
 
-franc microservice for natural language detection. Based on [franc-min](https://github.com/wooorm/franc/tree/master/packages/franc-min) Node.js package.
+franc, a AWS microservice for natural language detection Based on [franc-min](https://github.com/wooorm/franc/tree/master/packages/franc-min) Node.js package.
 
 
 ### Testing

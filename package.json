@@ -1,7 +1,7 @@
 {
-  "name": "franc",
-  "version": "1.0.0",
-  "description": "franc, a Node.js microservice for natural language detection",
+  "name": "franc-aws",
+  "version": "1.0.1",
+  "description": "franc, a AWS microservice for natural language detection",
   "scripts": {
     "test": "npm run eslint && mocha --no-timeouts",
     "create": "claudia create --region eu-central-1 --handler lambda.handler --deploy-proxy-api --profile claudia",
@@ -10,15 +10,15 @@
     "destroy": "claudia destroy --profile claudia"
   },
   "api": {
-    "host": "https://hbeorn4vp1.execute-api.eu-central-1.amazonaws.com",
+    "host": "https://6yq7rnw72h.execute-api.eu-central-1.amazonaws.com",
     "path": "/latest"
   },
   "author": {
     "name": "Sergej Müller",
     "url": "https://sergejmueller.github.io"
   },
-  "homepage": "https://github.com/sergejmueller/franc",
-  "repository": "sergejmueller/franc",
+  "homepage": "https://github.com/sergejmueller/franc-aws",
+  "repository": "sergejmueller/franc-aws",
   "license": "MIT",
   "dependencies": {
     "franc-min": "^3.1.0"
