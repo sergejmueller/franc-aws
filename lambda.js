@@ -8,7 +8,7 @@ exports.handler = ( event, context ) => {
         return context.succeed( {
             statusCode: 405,
             headers: { 'Content-Type': 'text/html' },
-            body: '<meta http-equiv=refresh content="0;url=https://github.com/sergejmueller/franc">'
+            body: '<meta http-equiv=refresh content="0;url=https://github.com/sergejmueller/franc-aws">'
         } )
     }
 
