@@ -1,0 +1,33 @@
+{
+  "name": "franc",
+  "version": "1.0.0",
+  "description": "franc, a Node.js microservice for natural language detection",
+  "scripts": {
+    "test": "npm run eslint && mocha --no-timeouts",
+    "create": "claudia create --region eu-central-1 --handler lambda.handler --deploy-proxy-api --profile claudia",
+    "deploy": "claudia update --profile claudia",
+    "eslint": "eslint lambda.js",
+    "destroy": "claudia destroy --profile claudia"
+  },
+  "api": {
+    "host": "https://hbeorn4vp1.execute-api.eu-central-1.amazonaws.com",
+    "path": "/latest"
+  },
+  "author": {
+    "name": "Sergej Müller",
+    "url": "https://sergejmueller.github.io"
+  },
+  "homepage": "https://github.com/sergejmueller/franc",
+  "repository": "sergejmueller/franc",
+  "license": "MIT",
+  "dependencies": {
+    "franc-min": "^3.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.1",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.17.1",
+    "eslint-plugin-node": "^5.0.0",
+    "mocha": "^3.2.0"
+  }
+}
