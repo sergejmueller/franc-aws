@@ -18,7 +18,14 @@ exports.handler = ( event, context ) => {
         } )
     }
 
+    const userAgent = event.headers['User-Agent']
     const parsedBody = qs.parse( event.body )
+
+    if ( ! userAgent || ! userAgent.startsWith( 'WordPress' ) ) {
+        return context.succeed( {
+            statusCode: 412
+        } )
+    }
 
     if ( typeof( parsedBody.data ) === 'undefined' ) {
         return context.succeed( {
@@ -35,7 +42,7 @@ exports.handler = ( event, context ) => {
         } )
     }
 
-    if ( parsedDataLength > 444 ) {
+    if ( parsedDataLength > 1024 ) {
         return context.succeed( {
             statusCode: 431
         } )

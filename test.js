@@ -24,6 +24,7 @@ Object.keys( bundles ).forEach( lang => {
     it ( lang, ( done ) => {
         chai.request( process.env.npm_package_api_host )
             .post( process.env.npm_package_api_path )
+            .set( 'User-Agent', 'WordPress/5.0.0' )
             .set( 'content-type', 'application/x-www-form-urlencoded' )
             .send( { 'data': bundles[lang] } )
             .then( res => {

@@ -1,6 +1,6 @@
 {
   "name": "franc-aws",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "franc, a AWS microservice for natural language detection",
   "scripts": {
     "test": "npm run eslint && mocha --no-timeouts",
